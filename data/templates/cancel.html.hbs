@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{templateTitle}}</title>
+    <style>
+      /* Basic resets for email clients */
+      body,table,td,div,p,a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table { border-collapse: collapse; }
+      img { border: 0; outline: none; text-decoration: none; display: block; }
+      a { text-decoration: none; }
+      /* Container */
+      .wrapper { width: 100%; background-color: #f6f6f6; padding: 0; margin: 0; }
+      .container { width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; }
+      .px { padding-left: 24px; padding-right: 24px; }
+      .py { padding-top: 24px; padding-bottom: 24px; }
+      .pt { padding-top: 24px; } .pb { padding-bottom: 24px; }
+      .small { font-size: 12px; line-height: 18px; color: #6b7280; }
+      .muted { color: #6b7280; }
+      .lead  { font-size: 18px; line-height: 28px; color: #111827; }
+      .h1    { font-size: 24px; line-height: 32px; font-weight: 700; color: #111827; }
+      .h2    { font-size: 18px; line-height: 26px; font-weight: 600; color: #111827; }
+      .btn   { display:inline-block; border-radius: 6px; padding: 12px 18px; background:#111827; color:#ffffff !important; font-weight:600; }
+      .cta   { background:#fef3c7; border:1px solid #fde68a; border-radius:12px; }
+      .divider { height:1px; background:#e5e7eb; }
+      .center { text-align:center; }
+      .red { color:#b91c1c; }
+      @media (max-width: 480px) {
+        .px { padding-left: 16px !important; padding-right: 16px !important; }
+        .py { padding-top: 16px !important; padding-bottom: 16px !important; }
+        .h1 { font-size: 22px !important; line-height: 30px !important; }
+      }
+    </style>
+  </head>
+  <body class="wrapper" style="background-color:#f6f6f6;">
+    <table role="presentation" class="wrapper" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table role="presentation" class="container" cellpadding="0" cellspacing="0" width="100%">
+            <!-- Header image -->
+            {{#if headerImage}}
+            <tr>
+              <td>
+                <img src="{{headerImage}}" alt="{{templateTitle}}" width="600" style="width:100%;max-width:600px;height:auto;">
+              </td>
+            </tr>
+            {{/if}}
+
+            <!-- Title -->
+            <tr>
+              <td class="px pt">
+                <div class="h1 red">Booking Cancelled</div>
+              </td>
+            </tr>
+
+            <!-- Intro -->
+            <tr>
+              <td class="px">
+                <p class="lead">Dear [FULLNAME],</p>
+                <p class="lead muted">Sorry to see you won't be coming anymore.</p>
+                <p class="lead">The reservation below has been cancelled:</p>
+              </td>
+            </tr>
+
+            <!-- Details card -->
+            <tr>
+              <td class="px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e5e7eb; border-radius:12px;">
+                  <tr>
+                    <td class="px py">
+                      <div class="h2">Table for [COVERS]</div>
+                      <p class="lead muted" style="margin:4px 0 0 0;">on <strong>[DATE]</strong> at <strong>[TIME]</strong></p>
+                      <p class="lead" style="margin:16px 0 0 0;">Booking name: <strong>[FULLNAME]</strong></p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Friendly sign-off -->
+            <tr>
+              <td class="px py">
+                <p class="lead">Thank you for letting us know, and we hope to see you another time.</p>
+                <p class="lead">All the best,</p>
+                <p class="lead"><strong>{{signature}}</strong></p>
+              </td>
+            </tr>
+
+            <!-- Callout: change booking / call us -->
+            <tr>
+              <td class="px pb">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="cta">
+                  <tr>
+                    <td class="px py">
+                      <div class="h2">Did you want to change your booking?</div>
+                      <p class="lead muted" style="margin:8px 0 16px 0;">Give us a call and we can help.</p>
+                      {{#if phoneLink}}
+                        <a href="tel:{{phoneLink}}" class="btn">Call {{phoneformatted}}</a>
+                      {{/if}}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr><td class="px"><div class="divider"></div></td></tr>
+
+            <!-- Venue footer block -->
+            <tr>
+              <td class="px py">
+                <p class="lead"><strong>{{venueName}}</strong></p>
+                <p class="lead muted" style="margin:4px 0 12px 0;">{{addressDetails}}</p>
+                {{#if menuLink}}
+                  <p class="small"><a href="{{menuLink}}">View our menus</a></p>
+                {{/if}}
+                <p class="small">
+                  {{#if facebookLink}}<a href="{{facebookLink}}">Facebook</a>{{/if}}
+                  {{#if tripAdvisorLink}} &nbsp;•&nbsp; <a href="{{tripAdvisorLink}}">TripAdvisor</a>{{/if}}
+                  {{#if emailLink}} &nbsp;•&nbsp; <a href="mailto:{{emailLink}}">{{emailLink}}</a>{{/if}}
+                </p>
+              </td>
+            </tr>
+
+            {{#if footerImage}}
+            <tr>
+              <td>
+                <img src="{{footerImage}}" alt="" width="600" style="width:100%;max-width:600px;height:auto;">
+              </td>
+            </tr>
+            {{/if}}
+
+            <!-- Legal / smallprint -->
+            <tr>
+              <td class="px py">
+                <p class="small">Seating requests are noted but not guaranteed. Public holiday surcharges may apply.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
