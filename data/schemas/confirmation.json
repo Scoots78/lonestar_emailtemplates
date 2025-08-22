@@ -1,0 +1,136 @@
+{
+  "title": "Confirmation Template",
+  "fields": [
+    {
+      "key": "templateName",
+      "label": "Template Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "templateTitle",
+      "label": "Template Title",
+      "type": "text"
+    },
+    {
+      "key": "headerImage",
+      "label": "Header Image URL",
+      "type": "url"
+    },
+    {
+      "key": "phoneLink",
+      "label": "Phone Link (tel:)",
+      "type": "text"
+    },
+    {
+      "key": "phoneformatted",
+      "label": "Phone (display)",
+      "type": "text"
+    },
+    {
+      "key": "menuText",
+      "label": "Menu Text",
+      "type": "text"
+    },
+    {
+      "key": "menuLink",
+      "label": "Menu Link",
+      "type": "url"
+    },
+    {
+      "key": "messageText",
+      "label": "Message Text",
+      "type": "textarea"
+    },
+    {
+      "key": "signature",
+      "label": "Signature",
+      "type": "text"
+    },
+    {
+      "key": "promoImageUrl",
+      "label": "Promo Image URL",
+      "type": "url"
+    },
+    {
+      "key": "promoAlt",
+      "label": "Promo Alt Text",
+      "type": "text"
+    },
+    {
+      "key": "promoCtaUrl",
+      "label": "Promo CTA URL",
+      "type": "url"
+    },
+    {
+      "key": "changeBookingMsg",
+      "label": "Change Booking Message",
+      "type": "text"
+    },
+    {
+      "key": "changeBookingLink",
+      "label": "Change Booking Link",
+      "type": "url"
+    },
+    {
+      "key": "changeBookingLinkText",
+      "label": "Change Booking Link Text",
+      "type": "text"
+    },
+    {
+      "key": "helpfulMessage1",
+      "label": "Helpful Message 1",
+      "type": "textarea"
+    },
+    {
+      "key": "helpfulMessage2",
+      "label": "Helpful Message 2",
+      "type": "textarea"
+    },
+    {
+      "key": "mapImageURL",
+      "label": "Map Image URL",
+      "type": "url"
+    },
+    {
+      "key": "addressDetails",
+      "label": "Address Details",
+      "type": "textarea"
+    },
+    {
+      "key": "facebookLink",
+      "label": "Facebook Link",
+      "type": "url"
+    },
+    {
+      "key": "tripAdvisorLink",
+      "label": "TripAdvisor Link",
+      "type": "url"
+    },
+    {
+      "key": "emailLink",
+      "label": "Email Address",
+      "type": "text"
+    },
+    {
+      "key": "facebookIconUrl",
+      "label": "Facebook Icon URL",
+      "type": "url"
+    },
+    {
+      "key": "tripAdvisorIconUrl",
+      "label": "TripAdvisor Icon URL",
+      "type": "url"
+    },
+    {
+      "key": "emailIconUrl",
+      "label": "Email Icon URL",
+      "type": "url"
+    },
+    {
+      "key": "footerImage",
+      "label": "Footer Image URL",
+      "type": "url"
+    }
+  ]
+}

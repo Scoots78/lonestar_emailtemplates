@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lone Star – {{templateName}}</title>
+  <style>
+    body{margin:0;padding:0;background:#f3f3f3;}
+    img{border:0;display:block;line-height:0;}
+    table{border-collapse:collapse;}
+    .wrapper{width:100%;background:#f3f3f3;}
+    .outer{width:100%;max-width:600px;margin:0 auto;background:#ffffff;}
+    .px{padding-left:24px;padding-right:24px;}
+    .py{padding-top:24px;padding-bottom:24px;}
+    .lead{font-family:Arial,Helvetica,sans-serif;color:#2b2b2b;font-size:16px;line-height:1.6;}
+    .link{color:#1d70b8;text-decoration:underline;}
+    .card{
+      background:#e8e3dd;
+      border-radius:20px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.18);
+    }
+    .card-pad{padding:28px;}
+    .card-heading{font-size:18px;font-weight:bold;color:#3a3026;margin:0 0 12px 0;font-family:Arial,Helvetica,sans-serif;}
+    .small{font-size:14px;color:#3a3026;line-height:1.65;}
+    .col{vertical-align:top;}
+    .col-6{width:50%;}
+    .map{width:100%;height:auto;}
+    .details{padding-left:12px;}
+    .h-rule{height:24px;line-height:24px;font-size:24px;}
+    @media only screen and (max-width:600px){
+      .outer{width:100%!important}
+      .px{padding-left:16px!important;padding-right:16px!important}
+      .py{padding-top:16px!important;padding-bottom:16px!important}
+      .card-pad{padding:22px!important}
+      .col-6{display:block;width:100%!important}
+      .details{padding-left:0!important;padding-top:10px!important}
+    }
+  </style>
+  <!--[if mso]>
+  <style>
+    .lead{font-family:Arial, sans-serif !important;}
+    .small{font-family:Arial, sans-serif !important;}
+  </style>
+  <![endif]-->
+</head>
+<body>
+  <center class="wrapper">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table role="presentation" class="outer" width="600" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+                <img src="{{headerImage}}" width="600" alt="{{templateTitle}}">
+              </td>
+            </tr>
+            <tr>
+              <td class="px py lead">
+                <p style="margin:0 0 12px 0;">Dear [FULLNAME]</p>
+                <p style="margin:0 0 18px 0;">Thanks for booking with us. Here's what we have you down for:</p>
+                <p style="margin:0 0 16px 0;">
+                  Table reservation for <strong>[COVERS]</strong> people on <strong>[DATE]</strong> at <strong>[TIME]</strong><br>
+                  Booking name: <strong>[FULLNAME]</strong><br>
+                  Confirmation number: <strong>[REF]</strong><br>
+                  Notes: [NOTES]<br>
+                  Guest Phone: [PHONE]
+                </p>
+                <p style="margin:0 0 16px 0;">
+                  Want to make any changes? Give us a call at
+                  <a class="link" href="tel:{phoneLink}">{{phoneformatted}}</a>.
+                  {{menuText}}
+                  <a class="link" href="{{menuLink}}">here</a>.
+                </p>
+                <p style="margin:0 0 16px 0;">
+                  {{messageText}}
+                </p>
+                <p style="margin:0;">Warmest regards,<br>{{signature}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="{{promoCtaUrl}}">
+                  <img src="{{promoImageUrl}}" width="600" alt="{{promoAlt}}">
+                </a>
+              </td>
+            </tr>
+            <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
+            <tr>
+              <td class="px">
+                <!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                  xmlns:w="urn:schemas-microsoft-com:office:word"
+                  fillcolor="#E8E3DD" arcsize="10%" stroke="f"
+                  style="width:552px;height:auto;mso-position-horizontal:center;">
+                  <v:shadow on="t" color="#000000" opacity="25%" offset="5pt,8pt" />
+                  <v:textbox inset="21pt,21pt,21pt,21pt">
+                <![endif]-->
+                <div class="card card-pad">
+                  <h3 class="card-heading">Helpful tips and information</h3>
+                  <div class="small">
+                    <p style="margin:0 0 14px 0;"><strong>Need to make a change to your booking?</strong><br>
+                      {{changeBookingMsg}}
+                      <a class="link" href="{{changeBookingLink}}">{{changeBookingLinkText}}</a>.
+                    </p>
+                    <p style="margin:0 0 14px 0;"><strong>Need to cancel your booking?</strong><br>
+                      <a class="link" href="[CANCEL]">Click here</a> if you need to cancel your booking.
+                    </p>
+                    <p style="margin:0 0 14px 0;"><strong>Please Note:</strong><br>
+                      {{helpfulMessage1}}
+                    </p>
+                    <p style="margin:0;">
+                      {{helpfulMessage2}}
+                    </p>
+                  </div>
+                </div>
+                <!--[if mso]></v:textbox></v:roundrect><![endif]-->
+              </td>
+            </tr>
+            <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
+            <tr>
+              <td class="px py">
+                <table role="presentation" width="100%">
+                  <tr>
+                    <td class="col col-6">
+                      <img class="map" src="{{mapImageURL}}" width="270" height="160" alt="Map">
+                    </td>
+                    <td class="col col-6 details lead" style="font-size:15px;">
+                      <strong>{{addressDetails}}</strong>
+                      <div style="height:10px; line-height:10px;">&nbsp;</div>
+                      <a href="{{facebookLink}}"><img src="{{facebookIconUrl}}" width="32" height="32" alt="Facebook" style="display:inline-block;margin-right:6px;"></a>
+                      <a href="{{tripAdvisorLink}}"><img src="{{tripAdvisorIconUrl}}" width="32" height="32" alt="TripAdvisor" style="display:inline-block;margin-right:6px;"></a>
+                      <a href="mailto:{{emailLink}}"><img src="{{emailIconUrl}}" width="32" height="32" alt="Email" style="display:inline-block;"></a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="{{footerImage}}" width="600" alt="Still hungry for more?">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
