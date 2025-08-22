@@ -51,47 +51,29 @@
           <table role="presentation" class="outer" width="600" cellpadding="0" cellspacing="0">
             <tr>
               <td>
-                <img src="{{headerImage}}" width="600" alt="{{templateTitle}}">
+                <img src="{{headerImageCancel}}" width="600" alt="{{templateTitle}}">
               </td>
             </tr>
-
-            <!-- Cancellation banner (extra section) -->
-            <tr>
-              <td class="px py lead">
-                <p style="margin:0 0 10px 0;"><strong>Booking Cancelled</strong></p>
-                <p style="margin:0 0 0 0;">We’re sorry you can’t make it this time. Below are the details of the cancelled reservation for your records.</p>
-              </td>
-            </tr>
-
-            <!-- Details (same structure) -->
             <tr>
               <td class="px py lead">
                 <p style="margin:0 0 12px 0;">Dear [FULLNAME]</p>
+                <p style="margin:0 0 18px 0;">This email confirms the cancellation of your booking.</p>
                 <p style="margin:0 0 16px 0;">
+                  The following booking has been cancelled: <br>
                   Table reservation for <strong>[COVERS]</strong> people on <strong>[DATE]</strong> at <strong>[TIME]</strong><br>
                   Booking name: <strong>[FULLNAME]</strong><br>
-                  Cancellation reference: <strong>[REF]</strong><br>
-                  Notes: [NOTES]<br>
-                  Guest Phone: [PHONE]
+                  Confirmation number: <strong>[REF]</strong><br>
                 </p>
-
-                <!-- Rebook / callout (extra section) -->
                 <p style="margin:0 0 16px 0;">
-                  Want to rebook? Give us a call at
+                  If you have any questions, please give us a call at
                   <a class="link" href="tel:{{phoneLink}}">{{phoneformatted}}</a>.
-                  {{menuText}}
-                  <a class="link" href="{{menuLink}}">here</a>.
                 </p>
-
-                <!-- Custom message slot (unchanged) -->
                 <p style="margin:0 0 16px 0;">
-                  {{messageText}}
+                  {{messageTextCancel}}
                 </p>
                 <p style="margin:0;">Warmest regards,<br>{{signature}}</p>
               </td>
             </tr>
-
-            <!-- Promo image (kept) -->
             <tr>
               <td>
                 <a href="{{promoCtaUrl}}">
@@ -99,10 +81,7 @@
                 </a>
               </td>
             </tr>
-
             <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
-
-            <!-- Helpful tips card (kept) with cancel-specific line -->
             <tr>
               <td class="px">
                 <!--[if mso]>
@@ -116,12 +95,12 @@
                 <div class="card card-pad">
                   <h3 class="card-heading">Helpful tips and information</h3>
                   <div class="small">
-                    <p style="margin:0 0 14px 0;"><strong>Changed your mind?</strong><br>
+                    <p style="margin:0 0 14px 0;"><strong>Need to make a change to your booking?</strong><br>
                       {{changeBookingMsg}}
                       <a class="link" href="{{changeBookingLink}}">{{changeBookingLinkText}}</a>.
                     </p>
-                    <p style="margin:0 0 14px 0;"><strong>Confirm cancellation status</strong><br>
-                      If you didn’t request this, please contact us on <a class="link" href="tel:{{phoneLink}}">{{phoneformatted}}</a>.
+                    <p style="margin:0 0 14px 0;"><strong>Need to cancel your booking?</strong><br>
+                      <a class="link" href="[CANCEL]">Click here</a> if you need to cancel your booking.
                     </p>
                     <p style="margin:0 0 14px 0;"><strong>Please Note:</strong><br>
                       {{helpfulMessage1}}
@@ -134,10 +113,7 @@
                 <!--[if mso]></v:textbox></v:roundrect><![endif]-->
               </td>
             </tr>
-
             <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
-
-            <!-- Map + address + socials (kept) -->
             <tr>
               <td class="px py">
                 <table role="presentation" width="100%">
@@ -156,8 +132,6 @@
                 </table>
               </td>
             </tr>
-
-            <!-- Footer image (kept) -->
             <tr>
               <td>
                 <img src="{{footerImage}}" width="600" alt="Still hungry for more?">
