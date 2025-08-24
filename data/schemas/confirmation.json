@@ -111,26 +111,6 @@
       "key": "emailLink",
       "label": "Email Address",
       "type": "text"
-    },
-    {
-      "key": "facebookIconUrl",
-      "label": "Facebook Icon URL",
-      "type": "url"
-    },
-    {
-      "key": "tripAdvisorIconUrl",
-      "label": "TripAdvisor Icon URL",
-      "type": "url"
-    },
-    {
-      "key": "emailIconUrl",
-      "label": "Email Icon URL",
-      "type": "url"
-    },
-    {
-      "key": "footerImage",
-      "label": "Footer Image URL",
-      "type": "url"
     }
   ]
 }

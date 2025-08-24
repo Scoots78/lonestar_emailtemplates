@@ -1,0 +1,31 @@
+{
+  "title": "Cancellation Template",
+  "fields": [
+    {
+      "key": "templateName",
+      "label": "Template Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "templateTitle",
+      "label": "Template Title",
+      "type": "text"
+    },
+    {
+      "key": "headerImageCancel",
+      "label": "Header Image URL (Cancel)",
+      "type": "url"
+    },
+    {
+      "key": "messageTextCancel",
+      "label": "Message Text (Cancel)",
+      "type": "textarea"
+    },
+    {
+      "key": "signature",
+      "label": "Signature",
+      "type": "text"
+    }
+  ]
+}
