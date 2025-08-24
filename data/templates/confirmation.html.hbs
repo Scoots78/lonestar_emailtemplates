@@ -9,29 +9,33 @@
     img{border:0;display:block;line-height:0;}
     table{border-collapse:collapse;}
     .wrapper{width:100%;background:#f3f3f3;}
-    .outer{width:100%;max-width:600px;margin:0 auto;background:#ffffff;}
-    .px{padding-left:24px;padding-right:24px;}
-    .py{padding-top:24px;padding-bottom:24px;}
-    .lead{font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;color:#2b2b2b;font-size:16px;line-height:1.6;}
+    .outer{width:100%;max-width:640px;margin:0 auto;background:#ffffff;}
+    .px{padding-left:60px;padding-right:60px;}
+    .pxcard{padding-left:30px;padding-right:30px;}
+    .py{padding-top:40px;padding-bottom:40px;}
+    .lead{font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;color:#523f31;font-size:18px;line-height:1.2;font-weight:600;}
+    .address{font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;color:#523f31;font-size:16px;line-height:1.2;font-weight:400;}
     .link{color:#1d70b8;text-decoration:underline;}
     .card{
       background:#e8e3dd;
       border-radius:20px;
-      box-shadow:0 18px 40px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.18);
+      box-shadow:0 8px 8px rgba(0,0,0,0.40), 0 4px 10px rgba(0,0,0,0.18);
     }
     .card-pad{padding:28px;}
-    .card-heading{font-size:18px;font-weight:bold;color:#3a3026;margin:0 0 12px 0;font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;}
-    .small{font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;font-size:14px;color:#3a3026;line-height:1.65;}
+    .card-heading{font-size:22px;font-weight:bold;color:#3a3026;margin:0 0 20px 0;font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;}
+    .small{font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;font-size:18px;color:#3a3026;line-height:1.20;}
     .col{vertical-align:top;}
-    .col-6{width:50%;}
+    .col-5{width:45%;}
+    .col-7{width:55%;}
     .map{width:100%;height:auto;}
     .details{padding-left:12px;}
-    .h-rule{height:24px;line-height:24px;font-size:24px;}
+    .h-rule{height:34px;line-height:34px;font-size:34px;}
     @media only screen and (max-width:600px){
       .outer{width:100%!important}
       .px{padding-left:16px!important;padding-right:16px!important}
+      .pxcard{padding-left:8px!important;padding-right:8px!important}
       .py{padding-top:16px!important;padding-bottom:16px!important}
-      .card-pad{padding:22px!important}
+      .card-pad{padding:10px!important}
       .col-6{display:block;width:100%!important}
       .details{padding-left:0!important;padding-top:10px!important}
     }
@@ -48,16 +52,16 @@
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
       <tr>
         <td align="center">
-          <table role="presentation" class="outer" width="600" cellpadding="0" cellspacing="0">
+          <table role="presentation" class="outer" width="640" cellpadding="0" cellspacing="0">
             <tr>
               <td>
-                <img src="{{headerImage}}" width="600" alt="{{templateTitle}}">
+                <img src="{{headerImage}}" width="640" alt="{{templateTitle}}">
               </td>
             </tr>
             <tr>
               <td class="px py lead">
-                <p style="margin:0 0 12px 0;">Dear [FULLNAME]</p>
-                <p style="margin:0 0 18px 0;">Thanks for booking with us. Here's what we have you down for:</p>
+                <p style="margin:0 0 18px 0;">Dear [FULLNAME]</p>
+                <p style="margin:0 0 18px 0;">Thanks for booking with us.<br>Here's what we have you down for:</p>
                 <p style="margin:0 0 16px 0;">
                   Table reservation for <strong>[COVERS]</strong> people on <strong>[DATE]</strong> at <strong>[TIME]</strong><br>
                   Booking name: <strong>[FULLNAME]</strong><br>
@@ -66,7 +70,7 @@
                   Guest Phone: [PHONE]
                 </p>
                 <p style="margin:0 0 16px 0;">
-                  Want to make any changes? Give us a call at
+                  Want to make any changes, give us a call at
                   <a class="link" href="tel:{{phoneLink}}">{{phoneformatted}}</a>.
                   {{menuText}}
                   <a class="link" href="{{menuLink}}">here</a>.
@@ -74,24 +78,25 @@
                 <p style="margin:0 0 16px 0;">
                   {{messageText}}
                 </p>
-                <p style="margin:0;">Warmest regards,<br>{{signature}}</p>
+                <p style="margin:0 0 16px 0;">Warmest regards,</p>
+                <p style="margin:0;">{{signature}}</p>
               </td>
             </tr>
             <tr>
               <td>
                 <a href="{{promoCtaUrl}}">
-                  <img src="{{promoImageUrl}}" width="600" alt="{{promoAlt}}">
+                  <img src="{{promoImageUrl}}" width="640" alt="{{promoAlt}}">
                 </a>
               </td>
             </tr>
             <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
             <tr>
-              <td class="px">
+              <td class="pxcard">
                 <!--[if mso]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
                   xmlns:w="urn:schemas-microsoft-com:office:word"
                   fillcolor="#E8E3DD" arcsize="10%" stroke="f"
-                  style="width:552px;height:auto;mso-position-horizontal:center;">
+                  style="width:600px;height:auto;mso-position-horizontal:center;">
                   <v:shadow on="t" color="#000000" opacity="25%" offset="5pt,8pt" />
                   <v:textbox inset="21pt,21pt,21pt,21pt">
                 <![endif]-->
@@ -105,8 +110,8 @@
                     <p style="margin:0 0 14px 0;"><strong>Need to cancel your booking?</strong><br>
                       <a class="link" href="[CANCEL]">Click here</a> if you need to cancel your booking.
                     </p>
-                    <p style="margin:0 0 14px 0;"><strong>Please Note:</strong><br>
-                      {{helpfulMessage1}}
+                    <p class="card-heading" style="margin:0;"><strong>Please Note:</strong></p>
+                    <p style="margin:0 0 14px 0;">{{helpfulMessage1}}
                     </p>
                     <p style="margin:0;">
                       {{helpfulMessage2}}
@@ -118,26 +123,29 @@
             </tr>
             <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
             <tr>
-              <td class="px py">
+              <td class="pxcard">
                 <table role="presentation" width="100%">
                   <tr>
-                    <td class="col col-6">
-                      <img class="map" src="{{mapImageURL}}" width="270" height="160" alt="Map">
+                    <td class="col col-5">
+                      <img class="map" src="{{mapImageURL}}" width="220" height="160" alt="Map">
                     </td>
-                    <td class="col col-6 details lead" style="font-size:15px;">
-                      <strong>{{addressDetails}}</strong>
+                    <td class="col col-7 details address" style="font-size:16px;">
+                    {{addressDetails}}<br>
+                      <a class="link" href="tel:{{phoneLink}}">{{phoneformatted}}</a>.<br>
+                      <a class="link" href="https://www.lonestar.co.nz">lonestar.co.nz</a>.
                       <div style="height:10px; line-height:10px;">&nbsp;</div>
-                      <a href="{{facebookLink}}"><img src="{{facebookIconUrl}}" width="32" height="32" alt="Facebook" style="display:inline-block;margin-right:6px;"></a>
-                      <a href="{{tripAdvisorLink}}"><img src="{{tripAdvisorIconUrl}}" width="32" height="32" alt="TripAdvisor" style="display:inline-block;margin-right:6px;"></a>
-                      <a href="mailto:{{emailLink}}"><img src="{{emailIconUrl}}" width="32" height="32" alt="Email" style="display:inline-block;"></a>
+                      <a href="{{facebookLink}}"><img src="{{facebookIconUrl}}" width="44" height="44" alt="Facebook" style="display:inline-block;margin-right:1px;"></a>
+                      <a href="{{tripAdvisorLink}}"><img src="{{tripAdvisorIconUrl}}" width="44" height="44" alt="TripAdvisor" style="display:inline-block;margin-right:1px;"></a>
+                      <a href="mailto:{{emailLink}}"><img src="{{emailIconUrl}}" width="44" height="44" alt="Email" style="display:inline-block;"></a>
                     </td>
                   </tr>
                 </table>
               </td>
             </tr>
+            <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
             <tr>
               <td>
-                <img src="{{footerImage}}" width="600" alt="Still hungry for more?">
+                <img src="{{footerImage}}" width="640" alt="Still hungry for more?">
               </td>
             </tr>
           </table>
