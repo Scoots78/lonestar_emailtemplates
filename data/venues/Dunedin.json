@@ -1,6 +1,7 @@
 {
-  "templateName": "Booking Cancellation",
-  "templateTitle": "Dunedin Booking Cancellation",
+  "templateNameConfiramation": "Dunedin Booking Confirmation",
+  "templateNameCancellation": "Dunedin Cancellation",
+  "templateNameReminder": "Dunedin Reminder",
   "headerImage": "http://localhost:3001/assets/images/confirmed.jpg",
   "phoneLink": "034741955",
   "phoneformatted": "03 474 1955",
@@ -26,5 +27,9 @@
   "emailIconUrl": "http://localhost:3001/assets/images/email.png",
   "footerImage": "http://localhost:3001/assets/images/footer.jpg",
   "headerImageCancel": "http://localhost:3001/assets/images/cancel.jpg",
-  "messageTextCancel": "Thank you for letting us know, and we hope to see you another time."
+  "messageTextCancel": "Thank you for letting us know, and we hope to see you another time.",
+  "headerImageReminder": "http://localhost:3001/assets/images/reminder.jpg",
+  "reminderImageCTA": "http://localhost:3001/assets/images/reminder-cta.jpg",
+  "promoUrlCTA2": "https://www.lonestar.co.nz/loyal",
+  "promoImageUrl2": "http://localhost:3001/assets/images/promo-2.jpg"
 }

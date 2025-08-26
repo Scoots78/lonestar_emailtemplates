@@ -2,15 +2,10 @@
   "title": "Confirmation Template",
   "fields": [
     {
-      "key": "templateName",
-      "label": "Template Name",
+      "key": "templateNameConfiramation",
+      "label": "Template Name (confirmation)",
       "type": "text",
       "required": true
-    },
-    {
-      "key": "templateTitle",
-      "label": "Template Title",
-      "type": "text"
     },
     {
       "key": "headerImage",

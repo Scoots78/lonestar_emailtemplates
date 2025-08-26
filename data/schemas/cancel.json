@@ -2,15 +2,10 @@
   "title": "Cancellation Template",
   "fields": [
     {
-      "key": "templateName",
-      "label": "Template Name",
+      "key": "templateNameCancellation",
+      "label": "Template Name (cancellation)",
       "type": "text",
       "required": true
-    },
-    {
-      "key": "templateTitle",
-      "label": "Template Title",
-      "type": "text"
     },
     {
       "key": "headerImageCancel",
