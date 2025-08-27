@@ -1,0 +1,32 @@
+{
+  "title": "Reminder Template",
+  "fields": [
+    {
+      "key": "templateNameReminder",
+      "label": "Template Name (reminder)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "headerImageReminder",
+      "label": "Header Image URL (reminder)",
+      "type": "url"
+    },
+    {
+      "key": "reminderImageCTA",
+      "label": "Promo CTA URL (reminder)",
+      "type": "url"
+    },
+    {
+      "key": "promoImageUrl2",
+      "label": "Additional CTA image (reminder - below blurb)",
+      "type": "text"
+    },
+    {
+      "key": "promoUrlCTA2",
+      "label": "Additional CTA url (reminder - below blurb)",
+      "type": "url"
+    }
+   
+  ]
+}

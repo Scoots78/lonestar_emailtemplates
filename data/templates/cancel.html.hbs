@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Lone Star – {{templateNameConfirmation}}</title>
+  <title>Lone Star – {{templateNameCancelation}}</title>
   <style>
     body{margin:0;padding:0;background:#f3f3f3;}
     img{border:0;display:block;line-height:0;}
@@ -55,29 +55,18 @@
           <table role="presentation" class="outer" width="640" cellpadding="0" cellspacing="0">
             <tr>
               <td>
-                <img src="{{headerImage}}" width="640" alt="{{templateTitle}}">
+                <img src="{{headerImageCancel}}" width="640" alt="{{templateTitle}}">
               </td>
             </tr>
             <tr>
               <td class="px py lead">
-                <p style="margin:0 0 18px 0;">Dear [FULLNAME]</p>
-                <p style="margin:0 0 18px 0;">Thanks for booking with us.<br>Here's what we have you down for:</p>
+                <p style="margin:0 0 12px 0;">Dear [FULLNAME]</p>
+                <p style="margin:0 0 18px 0;">Sorry to see you won't be coming anymore.</p>
+                <p style="margin:0 0 18px 0;">The reservation below has been cancelled:</p>
                 <p style="margin:0 0 16px 0;">
-                  Table reservation for <strong>[COVERS]</strong> people on <strong>[DATE]</strong> at <strong>[TIME]</strong><br>
-                  Booking name: <strong>[FULLNAME]</strong><br>
-                  Confirmation number: <strong>[REF]</strong><br>
-                  Notes: [NOTES]<br>
-                  Guest Phone: [PHONE]
-                </p>
-                <p style="margin:0 0 16px 0;">
-                  Want to make any changes, give us a call at
-                  <a class="link" href="tel:{{phoneLink}}">{{phoneformatted}}</a>.<br><br>
-                  {{menuText}}
-                  <a class="link" href="{{menuLink}}">here</a>.
-                </p>
-                <p style="margin:0 0 16px 0;">
-                  {{messageText}}
-                </p>
+                  Table for <strong>[COVERS]</strong> on <strong>[DATE]</strong> at <strong>[TIME]</strong><br>
+                  Booking name: [FULLNAME]
+                <p style="margin:0 0 16px 0;">{{messageTextCancel}}</p>
                 <p style="margin:0 0 16px 0;">Warmest regards,</p>
                 <p style="margin:0;">{{signature}}</p>
               </td>
@@ -90,38 +79,7 @@
               </td>
             </tr>
             <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
-            <tr>
-              <td class="pxcard">
-                <!--[if mso]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
-                  xmlns:w="urn:schemas-microsoft-com:office:word"
-                  fillcolor="#E8E3DD" arcsize="10%" stroke="f"
-                  style="width:600px;height:auto;mso-position-horizontal:center;">
-                  <v:shadow on="t" color="#000000" opacity="25%" offset="5pt,8pt" />
-                  <v:textbox inset="21pt,21pt,21pt,21pt">
-                <![endif]-->
-                <div class="card card-pad">
-                  <h3 class="card-heading">Helpful tips and information</h3>
-                  <div class="small">
-                    <p style="margin:0 0 14px 0;"><strong>Need to make a change to your booking?</strong><br>
-                      {{changeBookingMsg}}
-                      <a class="link" href="{{changeBookingLink}}">{{changeBookingLinkText}}</a>.
-                    </p>
-                    <p style="margin:0 0 14px 0;"><strong>Need to cancel your booking?</strong><br>
-                      <a class="link" href="[CANCEL]">Click here</a> if you need to cancel your booking.
-                    </p>
-                    <p class="card-heading" style="margin:0;"><strong>Please Note:</strong></p>
-                    <p style="margin:0 0 14px 0;">{{helpfulMessage1}}
-                    </p>
-                    <p style="margin:0;">
-                      {{helpfulMessage2}}
-                    </p>
-                  </div>
-                </div>
-                <!--[if mso]></v:textbox></v:roundrect><![endif]-->
-              </td>
-            </tr>
-            <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
+            
             <tr>
               <td class="pxcard">
                 <table role="presentation" width="100%">
@@ -139,10 +97,10 @@
                       <a href="mailto:{{emailLink}}"><img src="{{emailIconUrl}}" width="44" height="44" alt="Email" style="display:inline-block;"></a>
                     </td>
                   </tr>
+                  <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
                 </table>
               </td>
             </tr>
-            <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
             <tr>
               <td>
                 <img src="{{footerImage}}" width="640" alt="Still hungry for more?">

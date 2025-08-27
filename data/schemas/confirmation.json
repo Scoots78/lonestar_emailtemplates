@@ -2,15 +2,10 @@
   "title": "Confirmation Template",
   "fields": [
     {
-      "key": "templateName",
-      "label": "Template Name",
+      "key": "templateNameConfiramation",
+      "label": "Template Name (confirmation)",
       "type": "text",
       "required": true
-    },
-    {
-      "key": "templateTitle",
-      "label": "Template Title",
-      "type": "text"
     },
     {
       "key": "headerImage",
@@ -111,26 +106,6 @@
       "key": "emailLink",
       "label": "Email Address",
       "type": "text"
-    },
-    {
-      "key": "facebookIconUrl",
-      "label": "Facebook Icon URL",
-      "type": "url"
-    },
-    {
-      "key": "tripAdvisorIconUrl",
-      "label": "TripAdvisor Icon URL",
-      "type": "url"
-    },
-    {
-      "key": "emailIconUrl",
-      "label": "Email Icon URL",
-      "type": "url"
-    },
-    {
-      "key": "footerImage",
-      "label": "Footer Image URL",
-      "type": "url"
     }
   ]
 }

@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Lone Star – {{templateNameConfirmation}}</title>
+  <title>Lone Star – {{templateName}}</title>
   <style>
     body{margin:0;padding:0;background:#f3f3f3;}
     img{border:0;display:block;line-height:0;}
+    a{color:#597b91;}
     table{border-collapse:collapse;}
     .wrapper{width:100%;background:#f3f3f3;}
     .outer{width:100%;max-width:640px;margin:0 auto;background:#ffffff;}
@@ -14,8 +15,9 @@
     .pxcard{padding-left:30px;padding-right:30px;}
     .py{padding-top:40px;padding-bottom:40px;}
     .lead{font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;color:#523f31;font-size:18px;line-height:1.2;font-weight:600;}
+    .remind {font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;color:#597b91;font-size:20px;line-height:1.2;font-weight:600; }
     .address{font-family:"Courier New",Courier,monospace,Arial,Helvetica,sans-serif;color:#523f31;font-size:16px;line-height:1.2;font-weight:400;}
-    .link{color:#1d70b8;text-decoration:underline;}
+    .link{color:#597b91;text-decoration:underline;}
     .card{
       background:#e8e3dd;
       border-radius:20px;
@@ -55,36 +57,42 @@
           <table role="presentation" class="outer" width="640" cellpadding="0" cellspacing="0">
             <tr>
               <td>
-                <img src="{{headerImage}}" width="640" alt="{{templateTitle}}">
+                <img src="{{headerImageReminder}}" width="640" alt="{{templateTitleReminder}}">
+              </td>
+            </tr>
+            <tr><td class="h-rule" aria-hidden="true">&nbsp;</td></tr>
+            <tr>
+              <td>
+                <img src="{{reminderImageCTA}}" width="640" alt="Booking reminder">
+                <p class="remind link" style="margin:18px 0 18px 0; text-align:center"><a href="CONFIRM">Click here to confirm<br>your reservation</a></p>
               </td>
             </tr>
             <tr>
               <td class="px py lead">
                 <p style="margin:0 0 18px 0;">Dear [FULLNAME]</p>
-                <p style="margin:0 0 18px 0;">Thanks for booking with us.<br>Here's what we have you down for:</p>
+                <p style="margin:0 0 18px 0;">Ready for a great time? It's not far away now.<br>
+                Need to change your booking? No worries! Give us a call at <a class="link" href="tel:{{phoneLink}}">{{phoneformatted}}</a></p>
                 <p style="margin:0 0 16px 0;">
-                  Table reservation for <strong>[COVERS]</strong> people on <strong>[DATE]</strong> at <strong>[TIME]</strong><br>
+                  Table for <strong>[COVERS]</strong> people on <strong>[DATE]</strong> at <strong>[TIME]</strong><br>
                   Booking name: <strong>[FULLNAME]</strong><br>
                   Confirmation number: <strong>[REF]</strong><br>
                   Notes: [NOTES]<br>
                   Guest Phone: [PHONE]
                 </p>
-                <p style="margin:0 0 16px 0;">
-                  Want to make any changes, give us a call at
-                  <a class="link" href="tel:{{phoneLink}}">{{phoneformatted}}</a>.<br><br>
-                  {{menuText}}
-                  <a class="link" href="{{menuLink}}">here</a>.
-                </p>
-                <p style="margin:0 0 16px 0;">
-                  {{messageText}}
-                </p>
-                <p style="margin:0 0 16px 0;">Warmest regards,</p>
+                <p style="margin:0 0 16px 0;">See you real soon,</p>
                 <p style="margin:0;">{{signature}}</p>
               </td>
             </tr>
             <tr>
               <td>
-                <a href="{{promoCtaUrl}}">
+                <a href="{{promoUrlCTA2}}">
+                  <img src="{{promoImageUrl2}}" width="640" alt="Are you a Lone Star Loyal?">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="{{promoUrlCTA}}">
                   <img src="{{promoImageUrl}}" width="640" alt="{{promoAlt}}">
                 </a>
               </td>

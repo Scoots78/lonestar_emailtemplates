@@ -10,14 +10,20 @@ const TPL_DEFAULT = 'confirmation'
 export default function App(){
   const [venues, setVenues] = useState<string[]>([])
   const [templates, setTemplates] = useState<string[]>([])
-  const [venue, setVenue] = useState<string>('SoulBar')
+  const [venue, setVenue] = useState<string>('') // No default value
   const [templateKey, setTemplateKey] = useState<string>(TPL_DEFAULT)
   const [schema, setSchema] = useState<Schema | null>(null)
   const [values, setValues] = useState<Record<string, any>>({})
   const [html, setHtml] = useState<string>('')
 
   useEffect(() => {
-    axios.get('/api/venues').then(r => setVenues(r.data.venues || []))
+    axios.get('/api/venues').then(r => {
+      const venueList = r.data.venues || []
+      setVenues(venueList)
+      if (!venue && venueList.length > 0) {
+        setVenue(venueList[0]) // Set first venue as default if not set
+      }
+    })
     axios.get('/api/templates').then(r => setTemplates(r.data.templates || []))
   }, [])
 
