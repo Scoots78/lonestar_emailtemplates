@@ -2,6 +2,9 @@ import React, { useEffect, useMemo, useState } from 'react'
 import axios from 'axios'
 import Field from './Field'
 
+// Base path for API requests (injected at build time via Vite define)
+const API_BASE = (import.meta as any).env?.VITE_API_BASE || ''
+
 type SchemaField = { key:string; label:string; type:'text'|'textarea'|'url'|'color'; required?:boolean; }
 type Schema = { title:string; fields: SchemaField[] }
 
@@ -17,30 +20,30 @@ export default function App(){
   const [html, setHtml] = useState<string>('')
 
   useEffect(() => {
-    axios.get('/api/venues').then(r => {
+    axios.get(`${API_BASE}/api/venues`).then(r => {
       const venueList = r.data.venues || []
       setVenues(venueList)
       if (!venue && venueList.length > 0) {
         setVenue(venueList[0]) // Set first venue as default if not set
       }
     })
-    axios.get('/api/templates').then(r => setTemplates(r.data.templates || []))
+    axios.get(`${API_BASE}/api/templates`).then(r => setTemplates(r.data.templates || []))
   }, [])
 
   useEffect(() => {
     if(!venue) return
-    axios.get('/api/venues/'+venue).then(r => setValues(r.data))
+    axios.get(`${API_BASE}/api/venues/`+venue).then(r => setValues(r.data))
   }, [venue])
 
   useEffect(() => {
     if(!templateKey) return
-    axios.get('/api/schema/'+templateKey).then(r => setSchema(r.data.schema))
+    axios.get(`${API_BASE}/api/schema/`+templateKey).then(r => setSchema(r.data.schema))
   }, [templateKey])
 
   useEffect(() => {
     const run = setTimeout(() => {
       if(!venue || !templateKey) return
-      axios.post('/api/preview', { templateKey, venueKey: venue, overrides: values })
+      axios.post(`${API_BASE}/api/preview`, { templateKey, venueKey: venue, overrides: values })
         .then(r => setHtml(r.data.html || ''))
         .catch(() => setHtml('<p style="padding:16px;font-family:Arial">Preview error.</p>'))
     }, 250)
@@ -52,10 +55,10 @@ export default function App(){
   }
 
   function saveVenue(){
-    axios.put('/api/venues/'+venue, values).then(() => alert('Saved!')).catch(e => alert('Save failed: '+e))
+    axios.put(`${API_BASE}/api/venues/`+venue, values).then(() => alert('Saved!')).catch(e => alert('Save failed: '+e))
   }
 
-  const renderUrl = useMemo(() => `/render/${templateKey}?venue=${encodeURIComponent(venue)}`, [templateKey, venue])
+  const renderUrl = useMemo(() => `${API_BASE}/render/${templateKey}?venue=${encodeURIComponent(venue)}`, [templateKey, venue])
 
   return (
     <div className="container">

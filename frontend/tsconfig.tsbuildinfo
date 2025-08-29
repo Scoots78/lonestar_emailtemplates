@@ -1,1 +1,1 @@
-{"root":["./src/main.tsx","./src/ui/App.tsx","./src/ui/Field.tsx"],"version":"5.9.2"}
+{"root":["./src/main.tsx","./src/ui/app.tsx","./src/ui/field.tsx"],"version":"5.9.2"}

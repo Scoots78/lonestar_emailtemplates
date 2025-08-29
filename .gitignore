@@ -1,2 +1,32 @@
 /node_modules
 /frontend/node_modules
+
+# ------------------------------------------------------------------------------
+# Build & deployment artefacts
+# ------------------------------------------------------------------------------
+# Temporary build folders
+/production-deploy/
+/deploy/
+/temp_build/
+
+# Generated archives (release packages)
+lonestar*.zip
+lonestar*.tar.gz
+*.tar.gz
+
+# Front-end build output (generated)
+/frontend/dist/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Local environment / secrets
+.env
+*.env
+
+# OS & editor cruft
+*.DS_Store
+Thumbs.db

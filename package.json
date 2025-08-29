@@ -7,7 +7,11 @@
     "start": "node server.js",
     "dev": "node server.js",
     "build:frontend": "cd frontend && npm install && npm run build && cd ..",
-    "serve:frontend": "node server.js"
+    "serve:frontend": "node server.js",
+    "build": "npm run build:frontend",
+    "package": "node scripts/build-and-package.js",
+    "test:build": "cross-env TEST_ONLY=true node scripts/build-and-package.js",
+    "release": "npm run build:frontend && npm run package"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -15,5 +19,12 @@
     "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
     "juice": "^10.0.0"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.0",
+    "chalk": "^5.3.0",
+    "semver": "^7.5.4",
+    "node-fetch": "^3.3.2",
+    "cross-env": "^7.0.3"
   }
 }
