@@ -31,7 +31,14 @@ jobs:
         run: cd frontend && npm ci
       
       - name: Run tests
-        run: npm test || echo "No tests defined yet"
+        run: |
+          # Skip gracefully if the project has no test script
+          if npm pkg get scripts.test | grep -vq null; then
+            echo "Running unit tests…"
+            npm test
+          else
+            echo "No test script defined – skipping tests."
+          fi
 
   build:
     name: Build and validate package
