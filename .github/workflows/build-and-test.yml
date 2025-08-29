@@ -30,15 +30,14 @@ jobs:
       - name: Install frontend dependencies
         run: cd frontend && npm ci
       
-      - name: Run tests
-        run: |
-          # Skip gracefully if the project has no test script
-          if npm pkg get scripts.test | grep -vq null; then
-            echo "Running unit tests…"
-            npm test
-          else
-            echo "No test script defined – skipping tests."
-          fi
+      # ------------------------------------------------------------
+      # Run unit tests *if they exist*.
+      # `npm run --if-present` exits with code 0 when the script
+      # is missing, so the workflow will not fail on repos without
+      # a test script.
+      # ------------------------------------------------------------
+      - name: Run tests (if present)
+        run: npm run --if-present test
 
   build:
     name: Build and validate package
